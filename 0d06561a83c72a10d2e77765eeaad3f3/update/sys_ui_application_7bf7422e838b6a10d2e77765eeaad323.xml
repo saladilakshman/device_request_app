@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_application">
+    <sys_ui_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <hint/>
+        <name>Device Request Basket</name>
+        <order/>
+        <roles>x_1732636_device_r.device_management,x_1732636_device_r.dispatch_management,x_1732636_device_r.end_user,x_1732636_device_r.release_management</roles>
+        <sys_class_name>sys_ui_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-02 04:17:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7bf7422e838b6a10d2e77765eeaad323</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Device Request Basket</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Device Request Basket" source="x_1732636_device_r">0d06561a83c72a10d2e77765eeaad3f3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Device Request Basket">0d06561a83c72a10d2e77765eeaad3f3</sys_scope>
+        <sys_update_name>sys_ui_application_7bf7422e838b6a10d2e77765eeaad323</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-02 04:17:20</sys_updated_on>
+    </sys_ui_application>
+</record_update>

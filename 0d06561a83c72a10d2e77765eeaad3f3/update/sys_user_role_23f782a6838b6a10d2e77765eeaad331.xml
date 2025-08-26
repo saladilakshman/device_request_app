@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description/>
+        <elevated_privilege>false</elevated_privilege>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_1732636_device_r.ai_devices_user</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>ai_devices_user</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-02 04:17:19</sys_created_on>
+        <sys_id>23f782a6838b6a10d2e77765eeaad331</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1732636_device_r.ai_devices_user</sys_name>
+        <sys_package display_value="Device Request Basket" source="x_1732636_device_r">0d06561a83c72a10d2e77765eeaad3f3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Device Request Basket">0d06561a83c72a10d2e77765eeaad3f3</sys_scope>
+        <sys_update_name>sys_user_role_23f782a6838b6a10d2e77765eeaad331</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-02 04:17:19</sys_updated_on>
+    </sys_user_role>
+</record_update>

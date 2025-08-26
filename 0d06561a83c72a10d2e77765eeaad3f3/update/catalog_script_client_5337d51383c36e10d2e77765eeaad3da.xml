@@ -8,50 +8,58 @@
         <applies_target_record>false</applies_target_record>
         <applies_to>item</applies_to>
         <cat_item display_value="Order AI device">cbca08c3834bea10d2e77765eeaad3e9</cat_item>
-        <cat_variable>IO:5929420383c32e10d2e77765eeaad329</cat_variable>
+        <cat_variable>IO:dbd8cacf83832e10d2e77765eeaad334</cat_variable>
         <condition/>
         <description/>
         <field/>
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>quantity validation</name>
+        <name>calculate price when device changed</name>
         <order/>
         <published_ref/>
-        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
-   if (isLoading || newValue == '') {
-      return;
-   }
-var exp= new RegExp(/[A-z]/);
-var currentQuantity= g_form.getValue("quantity");
-var isValid=exp.test(currentQuantity);
-if(isValid || Number(currentQuantity)==0){
-	g_form.showFieldMsg("quantity",'please enter valid number between 1 and 9');
-	g_form.setMandatory("business_justification",false);
-	g_form.setDisplay("total_price",false);
-}
-else{
-	g_form.setMandatory("business_justification",true);
-	g_form.setDisplay("total_price",true);
-}
-   //Type appropriate comment here, and begin script below
-   
-}]]></script>
+        <script><![CDATA[
+    function onChange(control, oldValue, newValue, isLoading) {
+        if (isLoading || newValue == '') {
+            return;
+        }
+
+        var currentPrice = null;
+        var currentQuan = g_form.getValue("quantity");
+        g_form.getReference("choose_your_ai_device", function(rec) {
+            currentPrice = Number(rec.u_price_2);
+            if (currentQuan == ""|| Number(currentQuan)==0) {
+                g_form.setValue("total_price", currentPrice);
+            } else {
+                var total = currentPrice * Number(currentQuan);
+                g_form.setValue("total_price", total);
+            }
+        });
+
+
+
+        //Type appropriate comment here, and begin script below
+
+    }
+
+    //Type appropriate comment here, and begin script below
+
+]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-03 18:08:52</sys_created_on>
+        <sys_created_on>2025-08-04 08:40:54</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>b7fe820b83c32e10d2e77765eeaad3a6</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>quantity validation</sys_name>
+        <sys_id>5337d51383c36e10d2e77765eeaad3da</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>calculate price when device changed</sys_name>
         <sys_overrides/>
         <sys_package display_value="Device Request Basket" source="x_1732636_device_r">0d06561a83c72a10d2e77765eeaad3f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="Device Request Basket">0d06561a83c72a10d2e77765eeaad3f3</sys_scope>
-        <sys_update_name>catalog_script_client_b7fe820b83c32e10d2e77765eeaad3a6</sys_update_name>
+        <sys_update_name>catalog_script_client_5337d51383c36e10d2e77765eeaad3da</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-04 09:51:17</sys_updated_on>
+        <sys_updated_on>2025-08-04 08:48:18</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>
